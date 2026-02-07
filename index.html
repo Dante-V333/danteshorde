@@ -5,18 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dante’s Horde | Visual Identity & Web Design</title>
     <style>
-        :root {
-            --bg: #0f0f12;
-            --text: #e0e0e0;
-            --accent: #ff4d4d; /* High-energy Rosie Red */
-            --card-bg: #1a1a1f;
-            --input-bg: #25252b;
-        }
-
+        /* Hardcoded High-Contrast Theme */
         body {
-            font-family: 'Inter', -apple-system, sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #0f0f12; 
+            color: #e0e0e0;
             margin: 0;
             line-height: 1.6;
         }
@@ -27,195 +20,72 @@
             padding: 60px 20px;
         }
 
-        /* Header */
+        /* Typography */
         header {
             text-align: center;
             margin-bottom: 80px;
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             letter-spacing: -2px;
             margin: 0;
+            color: #ffffff;
             text-transform: uppercase;
         }
 
-        .accent { color: var(--accent); }
+        .accent { color: #ff4d4d; text-shadow: 0 0 15px rgba(255, 77, 77, 0.3); }
 
         .tagline {
-            font-size: 1.2rem;
-            font-weight: 600;
+            font-size: 1.3rem;
+            font-weight: 700;
             margin-top: 10px;
-            color: var(--accent);
+            color: #ff4d4d;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .sub-tagline {
             max-width: 600px;
-            margin: 15px auto;
-            opacity: 0.7;
+            margin: 20px auto;
+            opacity: 0.8;
+            font-size: 1.1rem;
         }
 
-        /* Service Grid */
+        /* Cards */
         .section-title {
             text-align: center;
-            font-size: 1.5rem;
-            margin-bottom: 30px;
+            font-size: 1.4rem;
+            margin-bottom: 40px;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
+            color: #ffffff;
+            border-bottom: 2px solid #ff4d4d;
+            display: table;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 5px;
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 25px;
             margin-bottom: 80px;
         }
 
         .card {
-            background: var(--card-bg);
-            padding: 30px;
+            background: #1a1a1f;
+            padding: 35px;
             border-radius: 12px;
-            border: 1px solid #333;
-            transition: 0.3s ease;
+            border: 1px solid #333333;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
         .card:hover {
-            border-color: var(--accent);
-            transform: translateY(-5px);
+            border-color: #ff4d4d;
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
         }
 
-        .card h3 { margin-top: 0; color: #fff; }
-        .price { font-weight: bold; color: var(--accent); display: block; margin-top: 15px; }
-
-        /* Contact Form */
-        .contact-section {
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 12px;
-            border: 1px solid #333;
-        }
-
-        form {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        .full-width { grid-column: span 2; }
-
-        label { display: block; margin-bottom: 8px; font-size: 0.9rem; font-weight: bold; }
-
-        input, select, textarea {
-            width: 100%;
-            padding: 12px;
-            background: var(--input-bg);
-            border: 1px solid #444;
-            color: #fff;
-            border-radius: 6px;
-            box-sizing: border-box;
-        }
-
-        textarea { height: 120px; resize: vertical; }
-
-        .submit-btn {
-            grid-column: span 2;
-            background: var(--accent);
-            color: white;
-            padding: 15px;
-            border: none;
-            border-radius: 6px;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-
-        .submit-btn:hover { opacity: 0.9; transform: scale(1.01); }
-
-        footer {
-            text-align: center;
-            margin-top: 100px;
-            opacity: 0.4;
-            font-size: 0.8rem;
-        }
-
-        @media (max-width: 600px) {
-            form { grid-template-columns: 1fr; }
-            .full-width { grid-column: span 1; }
-            .submit-btn { grid-column: span 1; }
-        }
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        <header>
-            <h1>DANTE’S <span class="accent">HORDE</span></h1>
-            <p class="tagline">Visual Identity Designer & Web Developer</p>
-            <p class="sub-tagline">
-                6 years of illustration expertise combined with professional web infrastructure. 
-                I build digital identities for creators and local brands.
-            </p>
-        </header>
-
-        <h2 class="section-title">Services</h2>
-        <section class="grid">
-            <div class="card">
-                <h3>Digital Identity</h3>
-                <p>Character icons, social banners, and profile assets optimized for creator platforms.</p>
-                <span class="price">Starting at $150</span>
-            </div>
-            <div class="card">
-                <h3>Commercial Web</h3>
-                <p>High-performance, design-led landing pages built for conversions and brand trust.</p>
-                <span class="price">Starting at $500</span>
-            </div>
-            <div class="card">
-                <h3>Full Strategy</h3>
-                <p>Complete visual branding from logo design to a fully integrated digital storefront.</p>
-                <span class="price">Custom Quote</span>
-            </div>
-        </section>
-
-        <h2 class="section-title">Project Inquiry</h2>
-        <section class="contact-section">
-            <form action="https://formspree.io/f/mzdabkjb" method="POST">
-                <div>
-                    <label>Name</label>
-                    <input type="text" name="name" required placeholder="Your name">
-                </div>
-                <div>
-                    <label>Email</label>
-                    <input type="email" name="email" required placeholder="email@example.com">
-                </div>
-                <div>
-                    <label>Project Type</label>
-                    <select name="project_type">
-                        <option value="Character/Illustration">Character / Illustration</option>
-                        <option value="Web Design">Web Design</option>
-                        <option value="Full Branding">Full Branding Identity</option>
-                    </select>
-                </div>
-                <div>
-                    <label>Estimated Budget</label>
-                    <select name="budget">
-                        <option value="$150-$500">$150 - $500</option>
-                        <option value="$500-$1000">$500 - $1,000</option>
-                        <option value="$1000+">$1,000+</option>
-                    </select>
-                </div>
-                <div class="full-width">
-                    <label>Project Goals</label>
-                    <textarea name="goals" placeholder="What are you trying to achieve with this project?"></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Send Inquiry</button>
-            </form>
-        </section>
-
-        <footer>
-            &copy; 2026 Dante’s Horde Studio. Hand-made art, high-performance tech.
-        </footer>
-    </div>
-
-</body>
-</html>
+        .card h3 { margin-top: 0; color: #ffffff; font-size: 1.4rem; }
